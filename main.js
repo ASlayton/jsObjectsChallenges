@@ -164,4 +164,20 @@
   challengeTwoElement.innerHTML += "<p>England: " + england + "</p>";
   challengeTwoElement.innerHTML += "<p>Other: " + other + "</p>";
 
-  
+//CHALLENGE 3
+// var test1 = {a: 5, b:2, operator: "add"};  //7
+// var test1 = {a: 5, b:2, operator: "subtract"}; //3
+var test1 = {a: 5, b:2, operator: "multiply"}; //10
+// var test1 = {a: 5, b:2, operator: "divide"}; //2.5
+
+if (test1.operator === "add"){
+  var result = test1.a + test1.b; 
+}else if(test1.operator === "subtract"){
+  var result = test1.a - test1.b;
+}else if(test1.operator === "multiply"){
+  var result = test1.a * test1.b;
+}else if(test1.operator === "divide"){
+  var result = test1.a / test1.b;
+};
+
+document.getElementById("challenge-3").innerHTML = "<p>" + result + "</p>"
