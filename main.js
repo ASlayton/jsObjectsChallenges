@@ -34,6 +34,134 @@
       if(playerScoreArray[n] === highScore){
         document.getElementById("challenge-1").innerHTML = "<h1>" + players[n].name + "</h1>";
         break;
+      }else{
+        document.getElementById("challenge-1").innerHTML = "<h3>NO WINNER!</h3>";
       };
     };
 
+//CHALLENGE 2
+  //DECLARE OBJECT
+  var winnerList = [
+    {
+     season: '1999-2000',
+     team: 'Real Madrid', 
+     country: 'Spain'
+    },
+    {
+     season: '2000-2001', 
+     team: 'Bayern Munich', 
+     country: 'Germany'
+    },
+    {
+     season: '2001-2002', 
+     team: 'Real Madrid', 
+     country: 'Spain'
+    },
+    {
+     season: '2002-2003', 
+     team: 'Milan', 
+     country: 'Italy'
+    },
+    {
+     season: '2003-2004', 
+     team: 'Porto', 
+     country: 'Portugal'
+    },
+    {
+     season: '2004-2005', 
+     team: 'Liverpool', 
+     country: 'England'
+    },
+    {
+     season: '2005-2006',
+     team: 'Barcelona', 
+     country: 'Spain'
+    },
+    {
+     season: '2006-2007', 
+     team: 'Milan', 
+     country: 'Italy'
+    },
+    {
+     season: '2007-2008', 
+     team: 'Manchester United', 
+     country: 'England'
+    },
+    {
+     season: '2008-2009', 
+     team: 'Barcelona', 
+     country: 'Spain'
+    },
+    {
+     season: '2009-2010', 
+     team: 'Internazionale',
+     country: 'Italy'
+    },
+    {
+     season: '2010-2011', 
+     team: 'Barcelona', 
+     country: 'Spain'
+    },
+    {
+     season: '2011-2012', 
+     team: 'Chelsea', 
+     country: 'England'
+    },
+    {
+     season: '2012-2013', 
+     team: 'Bayern Munich',
+     country: 'Germany'
+    },
+    {
+     season: '2013-2014', 
+     team: 'Real Madrid', 
+     country: 'Spain'
+    },
+    {
+     season: '2014-2015', 
+     team: 'Barcelona', 
+     country: 'Spain'
+    },
+    {
+     season: '2015-2016', 
+     team: 'Real Madrid', 
+     country: 'Spain'
+    },
+    {
+     season: '2016-2017', 
+     team: 'Real Madrid', 
+     country: 'Spain'
+    },
+  ];
+  var spain = 0;
+  var germany = 0;
+  var italy = 0;
+  var portugal = 0;
+  var england = 0;
+  var other = 0;
+  for(var j = 0; j < winnerList.length; j++){
+    if(winnerList[j].country === "Spain"){
+      spain++;
+    }else if(winnerList[j].country === "Germany"){
+      germany++;
+    }else if(winnerList[j].country === "Italy"){
+      italy++;
+    }else if(winnerList[j].country === "Portugal"){
+      portugal++;
+    }else if(winnerList[j].country === "England"){
+      england++;
+    }else{
+      other++;
+    };
+  };
+
+  console.log(spain, germany, italy, portugal, england, other);
+  var challengeTwoElement = document.getElementById("challenge-2");
+  challengeTwoElement.innerHTML += "<p>Spain: " + spain + "</p>";
+  challengeTwoElement.innerHTML += "<p>Italy: " + italy + "</p>";
+  challengeTwoElement.innerHTML += "<p>Germany: " + germany + "</p>";
+  challengeTwoElement.innerHTML += "<p>Portugal: " + portugal + "</p>";
+  challengeTwoElement.innerHTML += "<p>England: " + england + "</p>";
+  challengeTwoElement.innerHTML += "<p>Other: " + other + "</p>";
+
+  
