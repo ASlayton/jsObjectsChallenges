@@ -1,6 +1,6 @@
-//console.log("Why, hello there.");
+// //console.log("Why, hello there.");
 
-// CHALLENGE ONE GROUP WORK
+// // CHALLENGE ONE GROUP WORK
   //Declare Object
     var players = [
       {
@@ -32,14 +32,13 @@
   //determine which player had the highest score and declare them the winner
     for(var n = 0; n < players.length; n++){
       if(playerScoreArray[n] === highScore){
-        document.getElementById("challenge-1").innerHTML = "<h1>" + players[n].name + "</h1>";
+        document.getElementById("challenge-1").innerHTML += "<h3>" + players[n].name + "</h3>";
         break;
       }else{
-        document.getElementById("challenge-1").innerHTML = "<h3>NO WINNER!</h3>";
       };
     };
 
-//CHALLENGE 2
+// //CHALLENGE 2
   //DECLARE OBJECT
   var winnerList = [
     {
@@ -164,7 +163,7 @@
   challengeTwoElement.innerHTML += "<p>England: " + england + "</p>";
   challengeTwoElement.innerHTML += "<p>Other: " + other + "</p>";
 
-//CHALLENGE 3
+// //CHALLENGE 3
 // var test1 = {a: 5, b:2, operator: "add"};  //7
 // var test1 = {a: 5, b:2, operator: "subtract"}; //3
 var test1 = {a: 5, b:2, operator: "multiply"}; //10
@@ -180,16 +179,40 @@ if (test1.operator === "add"){
   var result = test1.a / test1.b;
 };
 
-document.getElementById("challenge-3").innerHTML = "<p>" + result + "</p>";
+document.getElementById("challenge-3").innerHTML += "<h3>" + result + "</h3>";
 
-// //CHALLENGE 4
+//CHALLENGE 4
 var paramNames = ['name','age'];
 var names = ['fred','barney'];
 var ages = [30,40];
+var charArray = [];
 var character = {};
 for(var i = 0; i < names.length; i++){
   character[i] = {};
   character[i].name = names[i];
   character[i].age = ages[i];
+  charArray.push(character[i]);
 };
-console.log(character);
+
+var chal4Ele = document.getElementById("challenge-4");
+for(var n = 0; n < charArray.length; n++){
+  chal4Ele.innerHTML += "<h3>Name: " + charArray[n].name + "</h3>";
+  chal4Ele.innerHTML += "<h3>Age:" + charArray[n].age + "</h3>";
+};
+
+
+
+
+//CHALLENGE 5
+var candidate1 = {
+  minSalary: 950000
+};
+let job1 = {
+  maxSalary: 100000
+};
+
+if (candidate1.minSalary < (job1.maxSalary - (job1.maxSalary * .10))){
+  document.getElementById("challenge-5").innerHTML += "<h3>Person is hireable.</h3>";
+}else{
+  document.getElementById("challenge-5").innerHTML += "<h3>Person is not hireable.</h3>";
+};
