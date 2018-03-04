@@ -187,9 +187,9 @@ var paramNames = ['name','age'];
 var names = ['fred','barney'];
 var ages = [30,40];
 var character = {};
-
-
-// names.forEach((name, i))
-
-// console.log("My result:", cartoonChars);
-paramNames.forEach();
+for(var i = 0; i < names.length; i++){
+  character[i] = {};
+  character[i].name = names[i];
+  character[i].age = ages[i];
+};
+console.log(character);
