@@ -180,4 +180,16 @@ if (test1.operator === "add"){
   var result = test1.a / test1.b;
 };
 
-document.getElementById("challenge-3").innerHTML = "<p>" + result + "</p>"
+document.getElementById("challenge-3").innerHTML = "<p>" + result + "</p>";
+
+// //CHALLENGE 4
+var paramNames = ['name','age'];
+var names = ['fred','barney'];
+var ages = [30,40];
+var character = {};
+for(var i = 0; i < names.length; i++){
+  character[i] = {};
+  character[i].name = names[i];
+  character[i].age = ages[i];
+};
+console.log(character);
